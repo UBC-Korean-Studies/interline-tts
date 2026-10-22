@@ -3,9 +3,6 @@ syntax = "proto3";
 package interline.tts.v1;
 
 service Tts {
-  // Splits `text` into sentences, queues them, and streams back one WAV chunk
-  // per sentence, in order, as soon as each is ready. Cancel the call to drop
-  // any sentences still waiting in the queue.
   rpc Synthesize(SynthesizeRequest) returns (stream AudioChunk);
 
   rpc GetStatus(StatusRequest) returns (StatusReply);
@@ -13,19 +10,19 @@ service Tts {
 
 message SynthesizeRequest {
   string text = 1;
-  string lang = 2;        // empty -> server default ("ko")
-  string voice = 3;       // empty -> server default ("M3")
-  float speed = 4;        // 0 -> default (1.05). Valid range 0.7 - 2.0
-  int32 total_steps = 5;  // 0 -> default (8). Valid range 5 - 12 (quality)
+  string lang = 2;
+  string voice = 3;
+  float speed = 4;
+  int32 total_steps = 5;
 }
 
 message AudioChunk {
-  uint32 index = 1;       // 0-based sentence index
-  uint32 total = 2;       // total sentences in this request
-  string text = 3;        // the sentence this audio belongs to
-  bytes audio = 4;        // complete, self-contained Ogg/Opus file
-  float duration = 5;     // seconds
-  string mime_type = 6;   // e.g. "audio/ogg; codecs=opus"
+  uint32 index = 1;
+  uint32 total = 2;
+  string text = 3;
+  bytes audio = 4;
+  float duration = 5;
+  string mime_type = 6;
 }
 
 message StatusRequest {}

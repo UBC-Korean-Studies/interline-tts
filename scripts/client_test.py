@@ -1,5 +1,3 @@
-"""Manual client: synthesize a Korean passage, save each chunk, report timing."""
-
 import sys
 import time
 from pathlib import Path

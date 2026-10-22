@@ -4,41 +4,38 @@
 # source: tts.proto
 # Protobuf Python Version: 7.35.1
 """Generated protocol buffer code."""
+
 from google.protobuf import descriptor as _descriptor
 from google.protobuf import descriptor_pool as _descriptor_pool
 from google.protobuf import runtime_version as _runtime_version
 from google.protobuf import symbol_database as _symbol_database
 from google.protobuf.internal import builder as _builder
+
 _runtime_version.ValidateProtobufRuntimeVersion(
-    _runtime_version.Domain.PUBLIC,
-    7,
-    35,
-    1,
-    '',
-    'tts.proto'
+    _runtime_version.Domain.PUBLIC, 7, 35, 1, "", "tts.proto"
 )
 # @@protoc_insertion_point(imports)
 
 _sym_db = _symbol_database.Default()
 
 
-
-
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\ttts.proto\x12\x10interline.tts.v1\"b\n\x11SynthesizeRequest\x12\x0c\n\x04text\x18\x01 \x01(\t\x12\x0c\n\x04lang\x18\x02 \x01(\t\x12\r\n\x05voice\x18\x03 \x01(\t\x12\r\n\x05speed\x18\x04 \x01(\x02\x12\x13\n\x0btotal_steps\x18\x05 \x01(\x05\"l\n\nAudioChunk\x12\r\n\x05index\x18\x01 \x01(\r\x12\r\n\x05total\x18\x02 \x01(\r\x12\x0c\n\x04text\x18\x03 \x01(\t\x12\r\n\x05\x61udio\x18\x04 \x01(\x0c\x12\x10\n\x08\x64uration\x18\x05 \x01(\x02\x12\x11\n\tmime_type\x18\x06 \x01(\t\"\x0f\n\rStatusRequest\">\n\x0bStatusReply\x12\x0f\n\x07workers\x18\x01 \x01(\r\x12\x0e\n\x06queued\x18\x02 \x01(\r\x12\x0e\n\x06\x61\x63tive\x18\x03 \x01(\r2\xa5\x01\n\x03Tts\x12Q\n\nSynthesize\x12#.interline.tts.v1.SynthesizeRequest\x1a\x1c.interline.tts.v1.AudioChunk0\x01\x12K\n\tGetStatus\x12\x1f.interline.tts.v1.StatusRequest\x1a\x1d.interline.tts.v1.StatusReplyb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(
+    b'\n\ttts.proto\x12\x10interline.tts.v1"b\n\x11SynthesizeRequest\x12\x0c\n\x04text\x18\x01 \x01(\t\x12\x0c\n\x04lang\x18\x02 \x01(\t\x12\r\n\x05voice\x18\x03 \x01(\t\x12\r\n\x05speed\x18\x04 \x01(\x02\x12\x13\n\x0btotal_steps\x18\x05 \x01(\x05"l\n\nAudioChunk\x12\r\n\x05index\x18\x01 \x01(\r\x12\r\n\x05total\x18\x02 \x01(\r\x12\x0c\n\x04text\x18\x03 \x01(\t\x12\r\n\x05\x61udio\x18\x04 \x01(\x0c\x12\x10\n\x08\x64uration\x18\x05 \x01(\x02\x12\x11\n\tmime_type\x18\x06 \x01(\t"\x0f\n\rStatusRequest">\n\x0bStatusReply\x12\x0f\n\x07workers\x18\x01 \x01(\r\x12\x0e\n\x06queued\x18\x02 \x01(\r\x12\x0e\n\x06\x61\x63tive\x18\x03 \x01(\r2\xa5\x01\n\x03Tts\x12Q\n\nSynthesize\x12#.interline.tts.v1.SynthesizeRequest\x1a\x1c.interline.tts.v1.AudioChunk0\x01\x12K\n\tGetStatus\x12\x1f.interline.tts.v1.StatusRequest\x1a\x1d.interline.tts.v1.StatusReplyb\x06proto3'
+)
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
-_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'tts_pb2', _globals)
+_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, "tts_pb2", _globals)
 if not _descriptor._USE_C_DESCRIPTORS:
-  DESCRIPTOR._loaded_options = None
-  _globals['_SYNTHESIZEREQUEST']._serialized_start=31
-  _globals['_SYNTHESIZEREQUEST']._serialized_end=129
-  _globals['_AUDIOCHUNK']._serialized_start=131
-  _globals['_AUDIOCHUNK']._serialized_end=239
-  _globals['_STATUSREQUEST']._serialized_start=241
-  _globals['_STATUSREQUEST']._serialized_end=256
-  _globals['_STATUSREPLY']._serialized_start=258
-  _globals['_STATUSREPLY']._serialized_end=320
-  _globals['_TTS']._serialized_start=323
-  _globals['_TTS']._serialized_end=488
+    DESCRIPTOR._loaded_options = None
+    _globals["_SYNTHESIZEREQUEST"]._serialized_start = 31
+    _globals["_SYNTHESIZEREQUEST"]._serialized_end = 129
+    _globals["_AUDIOCHUNK"]._serialized_start = 131
+    _globals["_AUDIOCHUNK"]._serialized_end = 239
+    _globals["_STATUSREQUEST"]._serialized_start = 241
+    _globals["_STATUSREQUEST"]._serialized_end = 256
+    _globals["_STATUSREPLY"]._serialized_start = 258
+    _globals["_STATUSREPLY"]._serialized_end = 320
+    _globals["_TTS"]._serialized_start = 323
+    _globals["_TTS"]._serialized_end = 488
 # @@protoc_insertion_point(module_scope)

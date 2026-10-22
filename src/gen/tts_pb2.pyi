@@ -16,7 +16,14 @@ class SynthesizeRequest(_message.Message):
     voice: str
     speed: float
     total_steps: int
-    def __init__(self, text: _Optional[str] = ..., lang: _Optional[str] = ..., voice: _Optional[str] = ..., speed: _Optional[float] = ..., total_steps: _Optional[int] = ...) -> None: ...
+    def __init__(
+        self,
+        text: _Optional[str] = ...,
+        lang: _Optional[str] = ...,
+        voice: _Optional[str] = ...,
+        speed: _Optional[float] = ...,
+        total_steps: _Optional[int] = ...,
+    ) -> None: ...
 
 class AudioChunk(_message.Message):
     __slots__ = ("index", "total", "text", "audio", "duration", "mime_type")
@@ -32,7 +39,15 @@ class AudioChunk(_message.Message):
     audio: bytes
     duration: float
     mime_type: str
-    def __init__(self, index: _Optional[int] = ..., total: _Optional[int] = ..., text: _Optional[str] = ..., audio: _Optional[bytes] = ..., duration: _Optional[float] = ..., mime_type: _Optional[str] = ...) -> None: ...
+    def __init__(
+        self,
+        index: _Optional[int] = ...,
+        total: _Optional[int] = ...,
+        text: _Optional[str] = ...,
+        audio: _Optional[bytes] = ...,
+        duration: _Optional[float] = ...,
+        mime_type: _Optional[str] = ...,
+    ) -> None: ...
 
 class StatusRequest(_message.Message):
     __slots__ = ()
@@ -46,4 +61,9 @@ class StatusReply(_message.Message):
     workers: int
     queued: int
     active: int
-    def __init__(self, workers: _Optional[int] = ..., queued: _Optional[int] = ..., active: _Optional[int] = ...) -> None: ...
+    def __init__(
+        self,
+        workers: _Optional[int] = ...,
+        queued: _Optional[int] = ...,
+        active: _Optional[int] = ...,
+    ) -> None: ...
