@@ -1,7 +1,7 @@
 import os
 
 ADDR = os.getenv("TTS_ADDR", "127.0.0.1:50051")
-DEFAULT_VOICE = os.getenv("TTS_DEFAULT_VOICE", "M2")
+DEFAULT_VOICE = os.getenv("TTS_DEFAULT_VOICE", "M4")
 DEFAULT_LANG = os.getenv("TTS_DEFAULT_LANG", "ko")
 DEFAULT_SPEED = 1
 DEFAULT_STEPS = 8
